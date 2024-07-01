@@ -955,7 +955,7 @@ figure {
 	max-width: 80rem;
 	margin: 0 auto 2rem auto;
 	padding: 2ch 2em;
-	background-color: white;
+	background-color: #CCC;
 	border-radius: 4px;
 	border-top: 2px solid rgba(144, 144, 144, 0.25);
 }

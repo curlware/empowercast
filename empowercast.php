@@ -2213,6 +2213,15 @@ function empowercast_init()
 			array(),
 			'20141021',
 			'all' );
+	wp_register_style(
+				'empowercast-font-awesome-style',
+				'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css',
+				array(),
+				'20141021',
+				'all' );
+
+	wp_enqueue_style('empowercast_fontawesome_styles',  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css', array(), EMPOWERCAST_VERSION);			
+
 
 	if( !empty($GeneralSettings['rss_emoji']) ) {
 		if( has_filter('the_content_feed',   'wp_staticize_emoji') ) {

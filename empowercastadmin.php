@@ -2415,14 +2415,14 @@ function empowercast_admin_menu()
             $parent_slug = 'empowercastadmin_onboarding.php';
             $parent_slug = apply_filters('empowercast_submenu_parent_slug', $parent_slug);
             add_menu_page(__('EmpowerCast', 'empowercast'), __('EmpowerCast', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_onboarding.php', 'empowercast_admin_page_onboarding', empowercast_get_root_url() . 'images/EmpowerCast_white.png');
-            add_submenu_page($parent_slug, __('Get Started', 'empowercast'), __('Get Started', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_onboarding.php', 'empowercast_admin_page_onboarding');
+            add_submenu_page($parent_slug, __('Get Dashboard', 'empowercast'), __('Dashboard', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_onboarding.php', 'empowercast_admin_page_onboarding');
             add_submenu_page($parent_slug, __('EmpowerCast Settings', 'empowercast'), __('Settings', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_basic', 'empowercast_admin_page_basic');
         } else {
             $parent_slug = 'empowercastadmin_basic';
             $parent_slug = apply_filters('empowercast_submenu_parent_slug', $parent_slug);
             add_menu_page(__('EmpowerCast', 'empowercast'), __('EmpowerCast', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_basic', 'empowercast_admin_page_basic', empowercast_get_root_url() . 'images/EmpowerCast_white.png');
             add_submenu_page($parent_slug, __('EmpowerCast Settings', 'empowercast'), __('Settings', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_basic', 'empowercast_admin_page_basic');
-            add_submenu_page($parent_slug, __('Get Started', 'empowercast'), __('Get Started', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_onboarding.php', 'empowercast_admin_page_onboarding');
+            add_submenu_page($parent_slug, __('Dashboard', 'empowercast'), __('Dashboard', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_onboarding.php', 'empowercast_admin_page_onboarding');
 
         }
         add_options_page(__('EmpowerCast', 'empowercast'), __('EmpowerCast', 'empowercast'), EMPOWERCAST_CAPABILITY_EDIT_PAGES, 'empowercastadmin_basic', 'empowercast_admin_page_basic');
@@ -4531,7 +4531,7 @@ function marketing_footer($button = false) {
     if (!$creds) {
         $pp_nonce = empowercast_login_create_nonce();
         echo '<div class="empowercast-podops-hosting-marketing">';
-        echo '<img class="hosting-marketing-podops-logo" src="' . empowercast_get_root_url() . 'images/Podops2017Logo-LOWERCASE.svg" alt="Podops Podcasting" />';
+        echo '<img class="hosting-marketing-podops-logo" src="' . empowercast_get_root_url() . 'images/podops.png" alt="Podops Podcasting" />';
         echo '<div class="hosting-marketing-text-container" ';
         if ($button) {
             echo 'style="width: 55%">';
